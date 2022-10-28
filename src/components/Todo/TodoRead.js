@@ -38,6 +38,10 @@ function TodoRead() {
         })
     }
 
+    const modClickHandler = () => {
+        history.push(`/todo/mod/${id}`)
+    }
+
     return (
         <div>
             <h1>{todo.tno}</h1>
@@ -47,7 +51,7 @@ function TodoRead() {
             <h3>Complete : {todo.complete?"DONE":"NOT YET"}</h3>
             <div>
                 <button onClick={clickHandler}>DELETE</button>
-                <button>MODIFY</button>
+                <button onClick={modClickHandler}>MODIFY</button>
             </div>
 
 
